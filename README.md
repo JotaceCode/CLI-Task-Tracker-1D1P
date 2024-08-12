@@ -1,3 +1,89 @@
-## Projecto 1: CLI Task Tracker 
-     El proyecto consiste en una aplicación que permita gestionar un archivo JSON que contenga información relacionada con Tareas.
-     Permitirá a través de la consola CREAR, ACTUALIZAR, BORRAR o CONSULTAR las tareas así como sus estados.
+¡Claro! Aquí tienes un README mejorado y atractivo para tu proyecto de CLI Task Tracker en Node.js. He incluido iconos para hacerlo más visual y organizado.
+
+---
+
+# 📋 CLI Task Tracker
+
+Bienvenido al **CLI Task Tracker**, una aplicación de línea de comandos desarrollada con Node.js para gestionar tareas mediante un archivo JSON. Este proyecto te permite **crear**, **actualizar**, **borrar** y **consultar** tareas, así como sus estados, de manera eficiente y sencilla desde la consola.
+
+## 🚀 Características
+
+- **Crear tareas**: Añade nuevas tareas a tu archivo JSON.
+- **Actualizar tareas**: Modifica tareas existentes y cambia su estado.
+- **Borrar tareas**: Elimina tareas del archivo JSON.
+- **Consultar tareas**: Visualiza la lista de tareas y sus detalles.
+
+## 🛠 Requisitos
+
+- [Node.js](https://nodejs.org/) v14 o superior
+
+## 📥 Instalación
+
+1. **Clona el repositorio**:
+
+    ```bash
+    git clone https://github.com/tuusuario/cli-task-tracker.git
+    cd cli-task-tracker
+    ```
+
+2. **Instala las dependencias**:
+
+    ```bash
+    npm install
+    ```
+
+## 🚀 Uso
+
+Aquí te mostramos cómo utilizar las principales funcionalidades de la aplicación:
+
+1. **Crear una tarea**:
+
+    ```bash
+    node index.js create "Nombre de la tarea" "Descripción de la tarea"
+    ```
+
+2. **Actualizar una tarea**:
+
+    ```bash
+    node index.js update <ID de la tarea> "Nombre actualizado" "Descripción actualizada" "Nuevo estado"
+    ```
+
+3. **Borrar una tarea**:
+
+    ```bash
+    node index.js delete <ID de la tarea>
+    ```
+
+4. **Consultar tareas**:
+
+    ```bash
+    node index.js list
+    ```
+
+## 🛠 Estructura del Proyecto
+
+- `index.js` – Archivo principal donde se maneja la lógica de la aplicación.
+- `tasks.json` – Archivo JSON donde se almacenan las tareas.
+- `package.json` – Archivo de configuración del proyecto y dependencias.
+
+## 💬 Contribuciones
+
+Si quieres contribuir a este proyecto, por favor sigue estos pasos:
+
+1. **Haz un fork** del repositorio.
+2. **Crea una nueva rama** para tus cambios (`git checkout -b feature/nueva-funcionalidad`).
+3. **Realiza tus cambios** y haz commit (`git commit -am 'Añadida nueva funcionalidad'`).
+4. **Haz push** a la rama (`git push origin feature/nueva-funcionalidad`).
+5. **Abre un Pull Request** en GitHub.
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## 📞 Contacto
+
+Para cualquier consulta, puedes contactar a [josvelsei@gmail.com](mailto:josvelsei@gmail.com).
+
+---
+
+¡Espero que este README te sea útil y que el proyecto de CLI Task Tracker sea todo un éxito! 🚀
