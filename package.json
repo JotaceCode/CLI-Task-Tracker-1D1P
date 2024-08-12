@@ -1,0 +1,24 @@
+{
+  "name": "cli-task-tracker",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha"
+  },
+  "author": "José Carlos Vélez Seisdedos",
+  "license": "ISC",
+  "description": "task-tracker in a JSON file with CRUD",
+  "devDependencies": {
+    "@types/chai": "^4.3.17",
+    "@types/mock-fs": "^4.13.4",
+    "@types/sinon": "^17.0.3",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "mock-fs": "^5.2.0"
+  },
+  "dependencies": {
+    "sinon": "^18.0.0"
+  }
+}
