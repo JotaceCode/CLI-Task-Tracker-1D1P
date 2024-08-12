@@ -1,4 +1,4 @@
-¡Claro! Aquí tienes un README mejorado y atractivo para tu proyecto de CLI Task Tracker en Node.js. He incluido iconos para hacerlo más visual y organizado.
+
 
 ---
 
@@ -85,5 +85,3 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 Para cualquier consulta, puedes contactar a [josvelsei@gmail.com](mailto:josvelsei@gmail.com).
 
 ---
-
-¡Espero que este README te sea útil y que el proyecto de CLI Task Tracker sea todo un éxito! 🚀
