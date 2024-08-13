@@ -39,36 +39,36 @@ Aquí te mostramos cómo utilizar las principales funcionalidades de la aplicaci
 1. **Crear una tarea**:
 
     ```bash
-    node index.js add "Nombre de la tarea" "Descripción de la tarea"
+    node src/index.js add "Nombre de la tarea" "Descripción de la tarea"
     ```
 
 2. **Actualizar una tarea**:
 
     ```bash
-    node index.js update <ID de la tarea> "Nombre actualizado" "Descripción actualizada" "Nuevo estado"
+    node src/index.js update <ID de la tarea> "Nombre actualizado" "Descripción actualizada" "Nuevo estado"
     ```
 
 3. **Borrar una tarea**:
 
     ```bash
-    node index.js delete <ID de la tarea>
+    node src/index.js delete <ID de la tarea>
     ```
 
 4. **Consultar tareas**:
 
     ```bash
-    node index.js list
+    node src/index.js list
     ```
 5. **Actualizar a DONE el estado de una tarea**:
 
     ```bash
-    node index.js mark-done <ID de la tarea>
+    node src/index.js mark-done <ID de la tarea>
     ```
 
 6. **Actualizar a IN-PROGRESS el estado de una tarea**:
 
     ```bash
-    node index.js mark-in-progress <ID de la tarea>
+    node src/index.js mark-in-progress <ID de la tarea>
     ```
 
 ## 🛠 Estructura del Proyecto
