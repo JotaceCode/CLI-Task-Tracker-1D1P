@@ -3,15 +3,12 @@ import sinon from 'sinon';
 import mockFs from 'mock-fs';
 import fs from 'fs';
 import path from 'path';
-
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { addTask, updateTask, deleteTask, updateTaskStatus, listTasks } from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// Importa las funciones del archivo principal
-import { addTask, updateTask, deleteTask, updateTaskStatus, listTasks } from '../src/index.js';
 
 const filePath = path.join(__dirname, '../src/tasks', 'tasks.json');
 const tasksDir = path.join(__dirname, "../src/tasks");
@@ -72,6 +69,12 @@ describe('Gestión de Tareas', () => {
         const consoleLogSpy = sinon.spy(console, 'log');
         listTasks();
         expect(consoleLogSpy.calledTwice).to.be.true;
+        deleteTask(1)
+        deleteTask(2)
+        fs.unlinkSync(filePath);
         consoleLogSpy.restore();
+       
     });
 });
+
+
