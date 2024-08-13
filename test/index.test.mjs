@@ -1,9 +1,14 @@
-
 import { expect } from 'chai';
 import sinon from 'sinon';
 import mockFs from 'mock-fs';
 import fs from 'fs';
 import path from 'path';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Importa las funciones del archivo principal
 import { addTask, updateTask, deleteTask, updateTaskStatus, listTasks } from '../src/index.js';
@@ -14,6 +19,7 @@ const tasksDir = path.join(__dirname, "../src/tasks");
 describe('Gestión de Tareas', () => {
 
     beforeEach(() => {
+        // Mockeamos el sistema de archivos con un archivo tasks.json vacío
         mockFs({
             [tasksDir]: {
                 'tasks.json': JSON.stringify([])
@@ -22,6 +28,7 @@ describe('Gestión de Tareas', () => {
     });
 
     afterEach(() => {
+        // Restauramos el sistema de archivos real
         mockFs.restore();
     });
 
@@ -33,6 +40,7 @@ describe('Gestión de Tareas', () => {
             description: 'Nueva tarea de prueba',
             status: 'to-do'
         });
+        deleteTask(1)
     });
 
     it('debería actualizar la descripción de una tarea', () => {
@@ -40,6 +48,7 @@ describe('Gestión de Tareas', () => {
         updateTask(1, 'Tarea actualizada');
         const tasks = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
         expect(tasks[0].description).to.equal('Tarea actualizada');
+        deleteTask(1)
     });
 
     it('debería eliminar una tarea', () => {
@@ -54,6 +63,7 @@ describe('Gestión de Tareas', () => {
         updateTaskStatus(1, 'in-progress');
         const tasks = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
         expect(tasks[0].status).to.equal('in-progress');
+        deleteTask(1)
     });
 
     it('debería listar las tareas', () => {
